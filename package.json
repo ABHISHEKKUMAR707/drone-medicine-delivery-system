@@ -1,0 +1,41 @@
+{
+  "name": "drones-delivery",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js",
+    "test": "mocha tests/**/*.test.js",
+    "migration": "sequelize db:migrate",
+    "undo-migration": "sequelize db:migrate:undo",
+    "seed": "sequelize db:seed:all",
+    "undo-seed": "sequelize db:seed:undo:all",
+    "create-model": "sequelize model:generate",
+    "create-migration": "sequelize migration:generate",
+    "create-seed": "sequelize seed:generate",
+    "reset-db": "sequelize db:migrate:undo:all && sequelize db:migrate && sequelize db:seed:all"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server-express": "^3.12.0",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "graphql": "^16.7.1",
+    "graphql-tools": "^9.0.0",
+    "node-cron": "^3.0.2",
+    "pg": "^8.11.1",
+    "sequelize": "^6.32.1",
+    "sinon": "^15.2.0"
+  },
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0",
+    "sequelize-cli": "^6.6.1"
+  }
+}

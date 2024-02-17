@@ -1,58 +1,18 @@
 # Drones Delivery Project
 
+The Drone Delivery System for Medical Supplies to Remote and War-Hit Regions is a groundbreaking initiative designed to provide swift and efficient distribution of crucial medical supplies to areas that face logistical challenges due to remoteness or conflict. This innovative system utilizes advanced drone technology to overcome geographical barriers and deliver life-saving supplies to communities in need.
 
-## Description
-This project is a drug delivery application using drones. It allows to manage drones, medications and drone battery logs.
+At its core, the system consists of a network of automated drones equipped with specialized compartments capable of carrying various medical supplies such as vaccines, medications, blood samples, and emergency equipment. These drones are designed to withstand diverse weather conditions and navigate challenging terrain with precision and reliability.
 
+The operation of the drone delivery system begins with careful planning and coordination between healthcare providers, humanitarian organizations, and local authorities. Medical supplies are carefully packaged and loaded onto the drones at designated distribution centers or hubs strategically located near the affected regions.
 
-## Folder architecture
-The application architecture follows a Model-View-Controller (MVC) pattern. In this project, the views correspond to the GraphQL schemas defined in the `types` directory.
+Once airborne, the drones are guided by a combination of GPS technology and autonomous flight algorithms, ensuring accurate navigation to the intended destinations. Real-time monitoring and control systems allow operators to track the drones' progress and make necessary adjustments to their flight paths as needed.
 
-![App Screenshot](https://raw.githubusercontent.com/angeldavidhf/angeldavidhf/main/projects/blob/structure.jpg)
+Upon reaching their destination, the drones execute precise landing maneuvers, delivering the medical supplies directly to healthcare facilities, field hospitals, or designated drop-off points. This direct delivery approach eliminates the need for ground transportation, reducing delivery times and ensuring timely access to critical supplies.
 
-- **database**: contains migrations, seeders and configs
-    - **migrations**: contains everything related to the structure of the tables in the database
-    - **seeders**: creates test data for the tables, migrations must be run first
-    - _config.js_: configuration of the database environments
-    - _connection.js_: connection to the database
-- **src**: contains migrations, seeders and config
-    - **controllers**: Controllers are responsible for handling database operations and business logic. The controllers used are: `DronesController`, `MedicationsController`, `DronesMedicationsController` and `BatteryLogsController`.
-    - **models**: Data models are defined using Sequelize, which represent the database tables. The models are: `Drones`, `Medications`, `DronesMedications` and `BatteryLogs`.
-    - **resolvers**: Apollo Server Express is used as GraphQL server to process queries and mutations made by clients.
-    - **types**: GraphQL Schemes.
-- **tests**: unit tests for entities.
-- _index.js_: Project initialization and database connection.
-- _Dockerfile_: Build the Node.js application container image.
-- _Dockerfile-db_: Build the database PostgreSQL container image.
-- _docker-compose.yml_: Services: "db" for the PostgreSQL container and "app" for the Node.js application container. Configurations for the database and environment variables are also defined.
+The Drone Delivery System for Medical Supplies to Remote and War-Hit Regions offers several advantages over traditional delivery methods. It significantly reduces the time and cost associated with transporting supplies over long distances, bypasses roadblocks and other logistical obstacles, and minimizes the risk to delivery personnel operating in hostile environments.
 
-### Despliegue local
-
-1. Clone the repository
-    ```bash
-      git clone https://github.com/angeldavidhf/drones-delivery.git
-    ```
-
-2. Go to the project directory
-    ```bash
-      cd drones-delivery
-    ```
-
-3. Instalar dependencias
-    ```bash
-      npm install
-    ```
-4. Make sure you have Docker started, you can check the [Docker documentation](https://docs.docker.com/engine/install/)
-5. Mount the docker images for drones-delivery-app and drones-delivery-db
-    ```docker
-      docker-compose build
-    ```
-6. Starting docker image services
-    ```docker
-      docker-compose up
-    ```
-
-:partying_face: :clap: Ready with this we can see our API in [Apollo Sandbox](https://studio.apollographql.com/sandbox) and the URL will be `http://localhost:4000/graphql`.
+Moreover, the system enhances the resilience of healthcare infrastructure in remote and conflict-affected areas, ensuring that essential medical services remain accessible even in the face of adversity. By leveraging cutting-edge technology and innovative solutions, this initiative represents a significant step forward in improving healthcare delivery and saving lives in some of the world's most challenging environments.
 
 
 ## Queries
